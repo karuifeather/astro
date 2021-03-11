@@ -1,0 +1,19 @@
+.footer {
+  height: 10rem;
+  background-color: #13142b;
+  justify-self: flex-end;
+  padding: 2rem 4rem;
+  text-align: center;
+
+  &__link:link,
+  &__link:visited {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #343b61;
+    transition: color 0.3s;
+  }
+
+  &__link:hover {
+    color: #f2f2f2;
+  }
+}

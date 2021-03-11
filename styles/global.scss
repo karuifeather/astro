@@ -1,0 +1,40 @@
+@import '../styles/mixins';
+
+$default-font-size: 1.6rem;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1 rem should be
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px; 9/16
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px; 8/16 =.5
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px; 12/16
+  }
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: $default-font-size;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: min(100vh);
+}
