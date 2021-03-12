@@ -5,22 +5,28 @@
   background-color: #dedede;
   position: relative;
 
+  &__blog {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 3rem 10rem;
+  }
+
   &__box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 70%;
+    height: 60%;
     width: 70vw;
     background-color: #eeeeee;
     box-shadow: 0 1.6rem 5rem rgba(0, 0, 0, 0.347);
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     padding: 2rem 4rem;
 
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-evenly;
   }
 
   &__heading {
@@ -61,5 +67,34 @@
       letter-spacing: 1px;
       outline: none;
     }
+  }
+}
+
+.goBack {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.author {
+  height: min-content;
+  width: 80%;
+  margin: 2rem auto;
+  padding: 2rem 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 1.4rem 4rem rgba(#000, 0.2);
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__img {
+    margin: 0;
+    border-radius: 50%;
   }
 }

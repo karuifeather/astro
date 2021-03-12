@@ -10,7 +10,7 @@ const Footer = ({ home }: FooterProps) => {
     <footer className={styles.footer}>
       {home ? (
         <a href='#' target='_blank' className={styles.footer__link}>
-          Created by mE for his Next.js practice. No copyright intended.
+          Created by mE for his Next.js practice.
         </a>
       ) : (
         <a
@@ -18,7 +18,7 @@ const Footer = ({ home }: FooterProps) => {
           target='_blank'
           className={styles.footer__link}
         >
-          All the article were scraped from PrepScholar.
+          All the articles were (manually) scraped from PrepScholar.
         </a>
       )}
     </footer>
