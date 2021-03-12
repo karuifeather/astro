@@ -1,19 +1,25 @@
-import { useState, useEffect, useRef } from 'react';
-
+import { useRef } from 'react';
 import styles from './main.module.scss';
+import { GetSign } from './GetSign';
+interface MainProps {
+  handleSearch?: (date: GetSign) => void;
+}
 
-const Main = () => {
+const Main = ({ handleSearch }: MainProps) => {
   const dateEl = useRef(null);
 
-  const [loading, setLoading] = useState(false);
-  const [date, setDate] = useState(null);
+  // Parses string to date and sends it back to
+  // Parent component
+  // 2021-03-23
+  const onButtonClick = (dateString: string): void => {
+    const [year, month, day] = dateString.split('-');
 
-  useEffect(() => {
-    console.log(loading, date);
-  }, [loading, date]);
+    const date = {
+      month: parseInt(month),
+      day: parseInt(day),
+    };
 
-  const onButtonClick = (date) => {
-    setDate(date);
+    handleSearch(date);
   };
 
   return (
