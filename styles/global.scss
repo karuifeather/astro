@@ -32,9 +32,3 @@ body {
   font-size: $default-font-size;
   box-sizing: border-box;
 }
-
-.container {
-  display: flex;
-  flex-direction: column;
-  height: min(100vh);
-}
