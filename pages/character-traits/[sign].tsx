@@ -21,7 +21,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllSigns();
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 };
 
